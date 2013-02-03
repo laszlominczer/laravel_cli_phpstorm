@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.2.xsd" name="Laravel Bob"
+           invoke="php artisan bob::build" alias="bob" enabled="true" version="2">
+    <command>
+        <name>controller</name>
+        <help><![CDATA[To generate controllers with actions, and view files, simply pass the action names as extra arguments to the controller command :
+                bob controller [args]  [actions ...]
+                Note : You can use the shortcut bob c instead of bob controller to save characters.
+                Use the --blade switch anywhere within the command to generate view files with the Blade extension (.blade.php).
+                ]]></help>
+        <params>[args] [actions...] --blade[=null]</params>
+    </command>
+
+    <command>
+        <name>c</name>
+        <help><![CDATA[Alias of controller]]></help>
+        <params>[args] [actions...] --blade[=null]</params>
+    </command>
+
+    <command>
+        <name>model</name>
+        <help><![CDATA[To generate Eloquent models, simply use the model command :
+        bob model [args]  [relationships ...]
+        Note : You can use the shortcut bob m instead of bob model to save characters.
+
+        Relationships can be defined in the format relationship_type:object_name for example :
+
+        bob model users has_many:task
+        Note: Always use the singular when generating relationships, if plurals are defined in the laravel strings.php file, they will be converted automatically.
+
+        Here is a list of acceptable relationships, and their shortcuts :
+
+        has_many or hm
+        has_one or ho
+        belongs_to or bt
+        has_and_belongs_to_many or hbm
+        You can also add automatic timestamps to your models by adding the argument --timestamps or --t. Remember to create the updated_at and created_at fields to your database.
+        ]]>
+        </help>
+        <params>[args]  [relationships ...] --timestamps[=null]</params>
+    </command>
+
+
+    <command>
+        <name>m</name>
+        <help><![CDATA[Alias of model]]></help>
+        <params>[args]  [relationships ...]</params>
+    </command>
+
+
+    <command>
+        <name>migration</name>
+        <help><![CDATA[
+            To make a new migration simply use the format :
+            bob migration
+            Note : You can use the shortcut bob mig instead of bob migration to save characters.
+            For more information and switches, see the Laravel documentation.
+            ]]>
+        </help>
+        <params>[args]  [test_cases ...]</params>
+    </command>
+    <command>
+        <name>mig</name>
+        <help><![CDATA[Alias of migration]]</help>
+        <params>[args]  [test_cases ...]</params>
+    </command>
+    <command>
+        <name>test</name>
+        <help><![CDATA[
+            To generate a unit test for use with PHPUnit, use the following command :
+            bob test [args]  [test_cases ...]
+            PHPUnit uses CamelCase for its class and functions, therefore tests can be created as in this example :
+            bob test Something AThingWorks AnotherThingWorks
+            Bob will automatically prefix Test to the class and test to each test case.
+            Note : You can use the shortcut bob t instead of bob test to save characters.
+            ]]>
+        </help>
+    </command>
+    <command>
+        <name>t</name>
+        <help><![CDATA[Alias of test command]]</help>
+        <params>[args]  [test_cases ...]</params>
+    </command>
+    <command>
+        <name>bundle</name>
+        <help>
+        <![CDATA[
+            Bob can now generate bundle directories, with a start.php, simply use the command :
+            bob bundle [args]
+        ]]>
+        </help>
+        <params>[args]</params>
+    </command>
+    <help><![CDATA[Bob can be used to generate all kinds of useful files and classes, for use with the wonderfully fabulous Laravel PHP Framework, authored by Taylor Otwell.]]></help>
+</framework>
+

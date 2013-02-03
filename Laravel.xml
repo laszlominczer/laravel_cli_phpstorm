@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.2.xsd" name="Laravel" invoke="php artisan" alias="artisan" enabled="true" version="2">
+  <command>
+    <name>help:commands</name>
+    <help><![CDATA[View a list of available artisan commands.]]></help>
+  </command>
+  <command>
+    <name>key:generate</name>
+    <help><![CDATA[Generate a secure application key. An application key will not be generated unless the field in config/application.php is empty.]]></help>
+  </command>
+  <command>
+    <name>session:table</name>
+    <help><![CDATA[Create a session table.]]></help>
+  </command>
+  <command>
+    <name>migrate:install</name>
+    <help><![CDATA[Create the Laravel migration table.]]></help>
+  </command>
+  <command>
+    <name>migrate:make</name>
+    <help><![CDATA[Creating a migration.]]></help>
+    <params>migration_or_bundle::tablename</params>
+  </command>
+  <command>
+    <name>migrate</name>
+    <help><![CDATA[Running outstanding migrations. --type application: Running outstanding migrations in the application --type bundle: Running outstanding migrations in a bundle]]></help>
+    <params>type[=application|bundle]</params>
+  </command>
+  <command>
+    <name>migrate:rollback</name>
+    <help><![CDATA[Rolling back the last migration operation.]]></help>
+  </command>
+  <command>
+    <name>migrate:reset</name>
+    <help><![CDATA[Rolling back the last migration operation.]]></help>
+  </command>
+  <command>
+    <name>bundle:install</name>
+    <help><![CDATA[Install a bundle]]></help>
+    <params>bundle_name</params>
+  </command>
+  <command>
+    <name>bundle:upgrade</name>
+    <help><![CDATA[Upgrade a bundle or all bundles]]></help>
+    <params>bundle_name[=null]</params>
+  </command>
+  <command>
+    <name>bundle:publish</name>
+    <help><![CDATA[Publish a bundle assets or all bundle assets]]></help>
+    <params>bundle_name[=null]</params>
+  </command>
+  <command>
+    <name>test</name>
+    <help><![CDATA[Running the application tests or bundle test]]></help>
+    <params>bundle_name[=null]</params>
+  </command>
+  <command>
+    <name>route:call</name>
+    <help><![CDATA[Calling a route]]></help>
+    <params>type url</params>
+  </command>
+</framework>
+
